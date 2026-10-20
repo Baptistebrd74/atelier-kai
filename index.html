@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=4">
 </head>
 <body>
 
@@ -16,7 +16,7 @@
   <div class="cursor" aria-hidden="true"></div>
 
   <!-- Océan de nuit : poissons et bulles en arrière-plan (invisibles le jour) -->
-  <div class="ocean" aria-hidden="true">
+  <div class="ocean" aria-hidden="true" style="position:fixed; inset:0; overflow:hidden; pointer-events:none; opacity:var(--ocean, 0)">
     <svg width="0" height="0" style="position:absolute">
       <symbol id="fish" viewBox="0 0 46 20">
         <path d="M12 10C20 1 36 1 45 10 36 19 20 19 12 10ZM14 10 2 2 5 10 2 18Z"/>
@@ -481,6 +481,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=4"></script>
 </body>
 </html>
