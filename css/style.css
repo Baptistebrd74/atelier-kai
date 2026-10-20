@@ -181,6 +181,12 @@ a { color: inherit; }
 .landscape__sun { fill: var(--sun); animation: sunrise 2.4s var(--ease) both; }
 @keyframes sunrise { from { transform: translateY(80px); opacity: 0; } }
 
+/* Vagues : une forme 2 fois plus large que l'écran, qui glisse d'une "période" (360)
+   puis recommence. Comme la forme se répète, on ne voit jamais la coupure. */
+.wave { animation: wave-move 9s linear infinite; }
+.wave--back { opacity: .6; animation-duration: 14s; animation-direction: reverse; }
+@keyframes wave-move { from { transform: translateX(-360px); } to { transform: translateX(0); } }
+
 .sea__lines path {
   fill: none;
   stroke: var(--bg);

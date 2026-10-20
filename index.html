@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body>
 
@@ -111,7 +111,8 @@
         <path class="landscape__hill" d="M0 250C180 130 330 110 470 170S760 250 900 230 1240 200 1440 240V420H0Z"/>
         <circle class="landscape__sun" cx="900" cy="250" r="70"/>
         <g class="sea">
-          <path class="sea__body" d="M0 255C240 238 480 250 720 258S1200 250 1440 262V420H0Z" fill="url(#seaGrad)"/>
+          <path class="wave wave--back" d="M0 250q90-10 180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0V420H0Z" fill="var(--sea-top)"/>
+          <path class="wave sea__body" d="M0 262q90-12 180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0V420H0Z" fill="url(#seaGrad)"/>
           <g class="sea__lines">
             <path d="M80 315q30-10 60 0t60 0M330 345q30-10 60 0t60 0M200 385q30-10 60 0t60 0M600 300q30-10 60 0t60 0M560 375q30-10 60 0t60 0M820 340q30-10 60 0t60 0M1000 305q30-10 60 0t60 0"/>
           </g>
@@ -250,7 +251,8 @@
           <circle class="tide__moon" cx="800" cy="900" r="46" fill="#E9DDB8"/>
           <circle class="tide__sun" cx="640" cy="300" r="90"/>
           <path class="landscape__hill" d="M0 520C220 400 380 390 560 450S860 520 1040 500 1300 470 1440 500V800H0Z"/>
-          <path d="M0 540C300 525 600 535 900 545S1260 540 1440 548V800H0Z" fill="url(#seaGrad2)"/>
+          <path class="wave wave--back" d="M0 536q90-12 180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0V800H0Z" fill="var(--sea-top)"/>
+          <path class="wave" d="M0 548q90-14 180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0V800H0Z" fill="url(#seaGrad2)"/>
           <g class="sea__lines">
             <path d="M120 610q30-10 60 0t60 0M420 650q30-10 60 0t60 0M260 720q30-10 60 0t60 0M760 600q30-10 60 0t60 0M700 700q30-10 60 0t60 0M1040 640q30-10 60 0t60 0M1240 700q30-10 60 0t60 0"/>
           </g>
@@ -481,6 +483,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=4"></script>
+  <script src="js/main.js?v=5"></script>
 </body>
 </html>
