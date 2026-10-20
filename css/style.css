@@ -191,9 +191,23 @@ a { color: inherit; }
 }
 @keyframes drift { to { transform: translateX(28px); } }
 
-.palm__trunk { fill: none; stroke: var(--palm); stroke-width: 9; stroke-linecap: round; }
-.palm__leaves { fill: var(--palm); transform-origin: 1222px 235px; animation: sway 5s ease-in-out infinite alternate; }
-@keyframes sway { from { transform: rotate(-2.5deg); } to { transform: rotate(2.5deg); } }
+/* Palmier : tout le dessin prend la couleur --palm (jour → nuit) */
+.palm { fill: var(--palm); }
+.palm__rings { fill: none; stroke: var(--bg); stroke-opacity: .22; stroke-width: 1.5; stroke-linecap: round; }
+.palm__crown { transform-origin: 1219px 238px; animation: sway 7s ease-in-out infinite alternate; }
+/* Chaque palme a son propre décalage (--d) : elles ne bougent pas toutes en même temps */
+.frond { transform-origin: 1219px 236px; animation: flutter 3.2s ease-in-out var(--d, 0s) infinite alternate; }
+@keyframes sway { from { transform: rotate(-1.5deg); } to { transform: rotate(1.5deg); } }
+@keyframes flutter { from { transform: rotate(-2.5deg); } to { transform: rotate(3deg); } }
+
+/* Raie manta : les ailes battent (on écrase la forme en hauteur) */
+.manta { fill: var(--accent); opacity: 0; filter: drop-shadow(0 0 10px var(--accent)); }
+.manta__tail { fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linecap: round; }
+.manta__body { transform-box: fill-box; transform-origin: center; animation: flap 2.4s ease-in-out infinite; }
+@keyframes flap {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(.62); }
+}
 
 /* ---------- Sections ---------- */
 .section { padding: clamp(80px, 12vw, 150px) 0; }
@@ -286,7 +300,6 @@ a { color: inherit; }
 .tide__scene { position: absolute; inset: 0; width: 100%; height: 100%; }
 .tide__sun { fill: var(--sun); }
 .stars circle { fill: #fff; }
-.manta { fill: var(--palm); opacity: 0; }
 .tide__text { position: relative; z-index: 2; text-align: center; padding: 0 16px; margin-top: -18vh; }
 .tide__line {
   font-family: var(--serif); font-style: italic;

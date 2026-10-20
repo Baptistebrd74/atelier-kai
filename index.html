@@ -74,14 +74,22 @@
             <path d="M80 315q30-10 60 0t60 0M330 345q30-10 60 0t60 0M200 385q30-10 60 0t60 0M600 300q30-10 60 0t60 0M560 375q30-10 60 0t60 0M820 340q30-10 60 0t60 0M1000 305q30-10 60 0t60 0"/>
           </g>
         </g>
+        <!-- Palmier dessiné pour Kaï : une palme réutilisée 7 fois, chacune bouge à son rythme -->
+        <defs>
+          <path id="frond" d="M0 0C30-26 80-34 130-14 150-6 162 8 168 24 156 14 146 10 136 12L138 22C126 14 116 12 104 14L104 24C92 16 80 14 68 16L66 26C54 16 40 12 26 12 16 12 8 8 0 4Z"/>
+        </defs>
         <g class="palm">
-          <path class="palm__trunk" d="M1235 420C1240 340 1238 280 1222 230" />
-          <g class="palm__leaves">
-            <path d="M1222 232C1180 200 1130 196 1080 215 1135 215 1175 225 1222 240Z"/>
-            <path d="M1222 232C1250 180 1300 160 1350 165 1300 180 1265 205 1225 242Z"/>
-            <path d="M1222 232C1190 170 1150 145 1110 140 1150 165 1180 200 1218 242Z"/>
-            <path d="M1222 232C1270 215 1320 225 1360 255 1310 238 1270 236 1226 244Z"/>
-            <path d="M1222 232C1230 180 1255 140 1290 120 1262 160 1245 195 1228 240Z"/>
+          <path class="palm__trunk" d="M1226 420C1230 352 1228 292 1213 238L1225 235C1243 292 1250 352 1252 420Z"/>
+          <path class="palm__rings" d="M1222 262q8 3 15-1M1227 292q8 3 16-1M1231 322q8 3 16-1M1234 352q8 3 17-1M1236 382q8 3 17-1"/>
+          <g class="palm__crown">
+            <g class="frond" style="--d:-.4s"><use href="#frond" transform="translate(1219 236) rotate(-4)"/></g>
+            <g class="frond" style="--d:-1.6s"><use href="#frond" transform="translate(1219 236) rotate(-38) scale(.9)"/></g>
+            <g class="frond" style="--d:-2.8s"><use href="#frond" transform="translate(1219 236) rotate(-72) scale(.72)"/></g>
+            <g class="frond" style="--d:-1s"><use href="#frond" transform="translate(1219 236) scale(-1 1) rotate(-6)"/></g>
+            <g class="frond" style="--d:-2.2s"><use href="#frond" transform="translate(1219 236) scale(-1 1) rotate(-40) scale(.88)"/></g>
+            <g class="frond" style="--d:-3.4s"><use href="#frond" transform="translate(1219 236) scale(-1 1) rotate(-74) scale(.7)"/></g>
+            <g class="frond" style="--d:-.2s"><use href="#frond" transform="translate(1219 236) rotate(28) scale(.8)"/></g>
+            <circle cx="1214" cy="242" r="6"/><circle cx="1225" cy="244" r="6"/><circle cx="1219" cy="250" r="5.5"/>
           </g>
         </g>
       </svg>
@@ -205,7 +213,12 @@
             <path d="M120 610q30-10 60 0t60 0M420 650q30-10 60 0t60 0M260 720q30-10 60 0t60 0M760 600q30-10 60 0t60 0M700 700q30-10 60 0t60 0M1040 640q30-10 60 0t60 0M1240 700q30-10 60 0t60 0"/>
           </g>
           <!-- Raie manta, le totem de Kaï -->
-          <path class="manta" d="M0 22C18 8 36 2 48 12 54 6 62 6 68 12 80 2 98 8 116 22 96 24 76 30 62 36L58 62 54 36C40 30 20 24 0 22Z"/>
+          <g class="manta">
+            <g class="manta__body">
+              <path class="manta__tail" d="M-44 0C-78 3-108-3-150 6"/>
+              <path d="M40-8C46-18 58-20 58-12 54-10 50-8 48-6 44-28 20-60-18-84-12-58-22-34-40-14-44-8-46-4-46 0-46 4-44 8-40 14-22 34-12 58-18 84 20 60 44 28 48 6 50 8 54 10 58 12 58 20 46 18 40 8 42 4 42-4 40-8Z"/>
+            </g>
+          </g>
         </svg>
         <div class="tide__text">
           <p class="tide__line tide__line--day">Le soleil se couche sur l'atelier…</p>

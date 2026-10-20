@@ -97,8 +97,9 @@ function update() {
     // La raie manta traverse la mer la nuit
     const swim = clamp((t - 0.45) / 0.55);
     manta.style.opacity = swim > 0 && swim < 1 ? 0.85 : 0;
-    manta.setAttribute("transform", `translate(${-140 + swim * 1700} ${640 - Math.sin(swim * Math.PI) * 40}) scale(1.3)`);
-    manta.style.fill = "var(--accent)";
+    // Elle suit une courbe douce et s'incline dans le sens de la nage
+    const tilt = -Math.cos(swim * Math.PI) * 8;
+    manta.setAttribute("transform", `translate(${-160 + swim * 1760} ${650 - Math.sin(swim * Math.PI) * 50}) rotate(${tilt}) scale(.8)`);
 
     // Les deux phrases
     const night = t > 0.5;
