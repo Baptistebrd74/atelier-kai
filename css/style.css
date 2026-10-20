@@ -465,6 +465,56 @@ a { color: inherit; }
 .footer__inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
 .footer p { margin: 0; }
 
+/* ---------- Océan de nuit (poissons + bulles) ---------- */
+/* Le JS règle --ocean : 0 le jour, 1 une fois la nuit tombée */
+.ocean {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: var(--ocean, 0);
+}
+main, .footer { position: relative; z-index: 1; }
+
+.school {
+  position: absolute;
+  top: var(--top);
+  left: 0;
+  animation: swim var(--dur) linear var(--delay) infinite;
+}
+.school--left { animation-name: swim-left; }
+@keyframes swim { from { transform: translateX(-20vw); } to { transform: translateX(120vw); } }
+@keyframes swim-left { from { transform: translateX(120vw) scaleX(-1); } to { transform: translateX(-20vw) scaleX(-1); } }
+
+.fish {
+  position: absolute;
+  width: var(--size);
+  height: calc(var(--size) * .44);
+  fill: var(--accent);
+  opacity: .5;
+  filter: drop-shadow(0 0 6px var(--accent));
+  animation: wobble 1.8s ease-in-out infinite alternate;
+}
+/* Petit mouvement de haut en bas, comme un poisson qui nage */
+@keyframes wobble { from { transform: translateY(-4px) rotate(-4deg); } to { transform: translateY(4px) rotate(4deg); } }
+
+.bubble {
+  position: absolute;
+  bottom: -20px;
+  left: var(--x);
+  width: var(--s);
+  height: var(--s);
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  opacity: .45;
+  animation: rise var(--dur) linear var(--delay) infinite;
+}
+@keyframes rise {
+  50% { transform: translate(14px, -55vh); }
+  100% { transform: translate(-6px, -112vh); opacity: 0; }
+}
+
 /* ---------- Apparition au scroll ---------- */
 .reveal { opacity: 0; transform: translateY(30px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
 .reveal.is-visible { opacity: 1; transform: none; }
@@ -503,5 +553,6 @@ a { color: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
+  .ocean { display: none; }
   .hero__title .line > * { transform: none; }
 }

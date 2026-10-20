@@ -86,6 +86,8 @@ function update() {
       root.style.setProperty(key, color);
     }
     root.style.setProperty("--glow", t.toFixed(3));
+    // Les poissons n'apparaissent qu'une fois la nuit bien tombée
+    root.style.setProperty("--ocean", clamp((t - 0.65) / 0.35).toFixed(3));
 
     // Le soleil se couche derrière la colline, la lune se lève
     sun.setAttribute("cy", 300 + t * 420);

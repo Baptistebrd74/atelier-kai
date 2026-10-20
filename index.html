@@ -15,6 +15,48 @@
   <!-- Curseur perso (desktop uniquement) -->
   <div class="cursor" aria-hidden="true"></div>
 
+  <!-- Océan de nuit : poissons et bulles en arrière-plan (invisibles le jour) -->
+  <div class="ocean" aria-hidden="true">
+    <svg width="0" height="0" style="position:absolute">
+      <symbol id="fish" viewBox="0 0 46 20">
+        <path d="M12 10C20 1 36 1 45 10 36 19 20 19 12 10ZM14 10 2 2 5 10 2 18Z"/>
+      </symbol>
+    </svg>
+
+    <!-- Un banc = un groupe qui nage ensemble ; --top, --dur, --delay, --size le rendent unique -->
+    <div class="school" style="--top:16%; --dur:42s; --delay:-6s; --size:26px">
+      <svg class="fish" style="left:0; top:0"><use href="#fish"/></svg>
+      <svg class="fish" style="left:34px; top:-14px; animation-delay:-.7s"><use href="#fish"/></svg>
+      <svg class="fish" style="left:30px; top:16px; animation-delay:-1.3s"><use href="#fish"/></svg>
+      <svg class="fish" style="left:66px; top:2px; animation-delay:-.4s"><use href="#fish"/></svg>
+    </div>
+    <div class="school school--left" style="--top:38%; --dur:55s; --delay:-20s; --size:34px">
+      <svg class="fish" style="left:0; top:0"><use href="#fish"/></svg>
+      <svg class="fish" style="left:46px; top:20px; animation-delay:-1s"><use href="#fish"/></svg>
+    </div>
+    <div class="school" style="--top:62%; --dur:34s; --delay:-14s; --size:18px">
+      <svg class="fish" style="left:0; top:0"><use href="#fish"/></svg>
+      <svg class="fish" style="left:22px; top:-10px; animation-delay:-.5s"><use href="#fish"/></svg>
+      <svg class="fish" style="left:24px; top:11px; animation-delay:-1.1s"><use href="#fish"/></svg>
+      <svg class="fish" style="left:46px; top:-2px; animation-delay:-.3s"><use href="#fish"/></svg>
+      <svg class="fish" style="left:48px; top:18px; animation-delay:-1.6s"><use href="#fish"/></svg>
+    </div>
+    <div class="school school--left" style="--top:80%; --dur:70s; --delay:-40s; --size:52px">
+      <svg class="fish" style="left:0; top:0"><use href="#fish"/></svg>
+    </div>
+    <div class="school" style="--top:50%; --dur:62s; --delay:-48s; --size:22px">
+      <svg class="fish" style="left:0; top:0"><use href="#fish"/></svg>
+      <svg class="fish" style="left:28px; top:12px; animation-delay:-.9s"><use href="#fish"/></svg>
+    </div>
+
+    <span class="bubble" style="--x:12%; --s:8px; --dur:14s; --delay:-2s"></span>
+    <span class="bubble" style="--x:27%; --s:5px; --dur:11s; --delay:-7s"></span>
+    <span class="bubble" style="--x:44%; --s:10px; --dur:17s; --delay:-4s"></span>
+    <span class="bubble" style="--x:63%; --s:6px; --dur:12s; --delay:-9s"></span>
+    <span class="bubble" style="--x:78%; --s:9px; --dur:15s; --delay:-1s"></span>
+    <span class="bubble" style="--x:91%; --s:4px; --dur:10s; --delay:-5s"></span>
+  </div>
+
   <!-- ===== EN-TÊTE ===== -->
   <header class="header">
     <a href="#accueil" class="logo" aria-label="Atelier Kaï, retour en haut">
