@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier Kaï · Sites web faits main</title>
+  <meta name="description" content="Atelier Kaï conçoit et code à la main des sites sur mesure pour les artisans et les petits commerces, à Annecy et Lyon.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Curseur perso (desktop uniquement) -->
+  <div class="cursor" aria-hidden="true"></div>
+
+  <!-- ===== EN-TÊTE ===== -->
+  <header class="header">
+    <a href="#accueil" class="logo" aria-label="Atelier Kaï, retour en haut">
+      <svg class="logo__icon" viewBox="0 0 40 56" aria-hidden="true">
+        <path d="M4 54V22a16 16 0 0 1 32 0v32z" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="27" cy="18" r="3.5" fill="currentColor"/>
+        <path d="M9 38c3-2 5 2 8 0s5 2 8 0 5 2 8 0M9 43c3-2 5 2 8 0s5 2 8 0 5 2 8 0M9 48c3-2 5 2 8 0s5 2 8 0 5 2 8 0" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M12 34c0-6 3-10 7-12-3 4-4 8-4 12z" fill="currentColor" opacity=".6"/>
+      </svg>
+      <span class="logo__text"><small>Atelier</small>Kaï</span>
+    </a>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#pour-qui">Pour qui</a>
+      <a href="#da-jour">Univers</a>
+      <a href="#projets">Projets</a>
+      <a href="#offre">Offre</a>
+      <a href="#a-propos">À propos</a>
+    </nav>
+
+    <div class="header__right">
+      <span class="mode-badge" aria-live="polite"><span class="mode-badge__dot"></span><span class="mode-badge__label">Jour</span></span>
+      <a href="#contact" class="btn btn--small">Me contacter</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== ACCUEIL ===== -->
+    <section class="hero" id="accueil">
+      <div class="hero__content">
+        <p class="eyebrow reveal">Atelier de création web · Annecy &amp; Lyon</p>
+        <h1 class="hero__title">
+          <span class="line"><span>Calme en surface,</span></span>
+          <span class="line"><em>solide en dessous.</em></span>
+        </h1>
+        <p class="hero__lede reveal">Des sites sur mesure, dessinés puis codés à la main pour les artisans et les petits commerces. Et quand il le faut, les outils derrière&nbsp;: inscriptions, paiements, espace de gestion.</p>
+        <div class="hero__actions reveal">
+          <a href="#contact" class="btn">Parler de votre projet</a>
+          <a href="#projets" class="btn btn--ghost">Voir un projet</a>
+        </div>
+      </div>
+
+      <!-- Paysage animé (couleurs pilotées par le mode jour/nuit) -->
+      <svg class="landscape" viewBox="0 0 1440 420" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="var(--sea-top)"/>
+            <stop offset="1" stop-color="var(--sea-bottom)"/>
+          </linearGradient>
+        </defs>
+        <path class="landscape__hill" d="M0 250C180 130 330 110 470 170S760 250 900 230 1240 200 1440 240V420H0Z"/>
+        <circle class="landscape__sun" cx="900" cy="250" r="70"/>
+        <g class="sea">
+          <path class="sea__body" d="M0 255C240 238 480 250 720 258S1200 250 1440 262V420H0Z" fill="url(#seaGrad)"/>
+          <g class="sea__lines">
+            <path d="M80 315q30-10 60 0t60 0M330 345q30-10 60 0t60 0M200 385q30-10 60 0t60 0M600 300q30-10 60 0t60 0M560 375q30-10 60 0t60 0M820 340q30-10 60 0t60 0M1000 305q30-10 60 0t60 0"/>
+          </g>
+        </g>
+        <g class="palm">
+          <path class="palm__trunk" d="M1235 420C1240 340 1238 280 1222 230" />
+          <g class="palm__leaves">
+            <path d="M1222 232C1180 200 1130 196 1080 215 1135 215 1175 225 1222 240Z"/>
+            <path d="M1222 232C1250 180 1300 160 1350 165 1300 180 1265 205 1225 242Z"/>
+            <path d="M1222 232C1190 170 1150 145 1110 140 1150 165 1180 200 1218 242Z"/>
+            <path d="M1222 232C1270 215 1320 225 1360 255 1310 238 1270 236 1226 244Z"/>
+            <path d="M1222 232C1230 180 1255 140 1290 120 1262 160 1245 195 1228 240Z"/>
+          </g>
+        </g>
+      </svg>
+    </section>
+
+    <!-- ===== POUR QUI ===== -->
+    <section class="section" id="pour-qui">
+      <div class="container">
+        <p class="eyebrow reveal">Pour qui <span class="wave-sign">∼</span></p>
+        <h2 class="title reveal">Des gens qui ont un vrai métier <em>et un vrai lieu.</em></h2>
+        <p class="intro reveal">Vous n'avez pas besoin d'une agence, mais un modèle Wix vous ferait ressembler à tout le monde. Vous voulez un site qui vous ressemble, et quelqu'un à qui parler directement.</p>
+
+        <div class="arches">
+          <article class="arch reveal">
+            <p class="arch__tag">Cœur de cible</p>
+            <h3>Artisans</h3>
+            <p>Peintres, tatoueurs, menuisiers&nbsp;: montrer votre travail, recevoir des devis.</p>
+          </article>
+          <article class="arch arch--sand reveal">
+            <p class="arch__tag">Cœur de cible</p>
+            <h3>Petits commerces</h3>
+            <p>Cafés, restaurants, boutiques&nbsp;: la carte, les horaires, les actus, parfois une réservation.</p>
+          </article>
+          <article class="arch arch--light reveal">
+            <p class="arch__tag">Aussi</p>
+            <h3>Indépendants</h3>
+            <p>Photographes, coachs, créateurs&nbsp;: une vitrine soignée qui vous ressemble.</p>
+          </article>
+          <article class="arch arch--light reveal">
+            <p class="arch__tag">Aussi</p>
+            <h3>Lieux &amp; assos</h3>
+            <p>Salles, collectifs, associations&nbsp;: un agenda, des inscriptions simples.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROMESSES ===== -->
+    <section class="section section--deep">
+      <div class="container">
+        <p class="eyebrow reveal">Ce qui nous distingue <span class="wave-sign">∼</span></p>
+        <h2 class="title reveal">Quatre <em>promesses.</em></h2>
+        <div class="promises">
+          <div class="promise reveal">
+            <span class="promise__num">01</span>
+            <h3>Fait main</h3>
+            <p>Chaque site part d'une maquette dessinée pour vous, puis il est codé à la main. Rien n'est un thème repeint.</p>
+          </div>
+          <div class="promise reveal">
+            <span class="promise__num">02</span>
+            <h3>Design et code réunis</h3>
+            <p>Les maquettes sont faites avec des designers partenaires. Le site en ligne ressemble vraiment à la maquette.</p>
+          </div>
+          <div class="promise reveal">
+            <span class="promise__num">03</span>
+            <h3>Au-delà de la vitrine</h3>
+            <p>Préinscriptions, paiements, espace de gestion&nbsp;: on construit l'outil quand il le faut.</p>
+          </div>
+          <div class="promise reveal">
+            <span class="promise__num">04</span>
+            <h3>Soin invisible</h3>
+            <p>Rapidité, accessibilité, RGPD et référencement livrés de base. Des prix fixes, un seul interlocuteur.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DA N°1 : JOUR ===== -->
+    <section class="section da" id="da-jour">
+      <div class="container da__grid">
+        <div>
+          <p class="eyebrow reveal">Univers n°1 <span class="wave-sign">∼</span></p>
+          <h2 class="title reveal">Fin de <em>journée.</em></h2>
+          <p class="intro reveal">La lumière dorée sur l'eau claire, les palmes, les matières naturelles. Une ambiance posée et chaleureuse, pour un site qui inspire confiance dès le premier regard.</p>
+          <ul class="keywords reveal">
+            <li>soigné</li><li>posé</li><li>clair</li><li>chaleureux</li><li>précis</li>
+          </ul>
+        </div>
+        <div class="da__card reveal">
+          <p class="da__label">Palette</p>
+          <div class="swatches">
+            <span style="--c:#F2EDE5" data-hex="#F2EDE5">Sable</span>
+            <span style="--c:#DFE3D4" data-hex="#DFE3D4">Écume</span>
+            <span style="--c:#8E9A82" data-hex="#8E9A82">Sauge</span>
+            <span style="--c:#C9A066" data-hex="#C9A066">Soleil</span>
+            <span style="--c:#263A2E" data-hex="#263A2E">Palme</span>
+          </div>
+          <p class="da__label">Typographies</p>
+          <p class="da__type-serif">Cormorant <em>Garamond</em></p>
+          <p class="da__type-sans">Montserrat, pour les textes courants.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TRANSITION : LA MARÉE ===== -->
+    <section class="tide" aria-label="Transition du jour vers la nuit">
+      <div class="tide__sticky">
+        <svg class="tide__scene" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="var(--sky-top)"/>
+              <stop offset="1" stop-color="var(--sky-bottom)"/>
+            </linearGradient>
+            <linearGradient id="seaGrad2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="var(--sea-top)"/>
+              <stop offset="1" stop-color="var(--sea-bottom)"/>
+            </linearGradient>
+            <radialGradient id="moonGlow">
+              <stop offset="0" stop-color="#E9DDB8" stop-opacity=".45"/>
+              <stop offset="1" stop-color="#E9DDB8" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="1440" height="800" fill="url(#skyGrad)"/>
+          <g class="stars"></g>
+          <circle class="tide__moon-glow" cx="800" cy="900" r="160" fill="url(#moonGlow)"/>
+          <circle class="tide__moon" cx="800" cy="900" r="46" fill="#E9DDB8"/>
+          <circle class="tide__sun" cx="640" cy="300" r="90"/>
+          <path class="landscape__hill" d="M0 520C220 400 380 390 560 450S860 520 1040 500 1300 470 1440 500V800H0Z"/>
+          <path d="M0 540C300 525 600 535 900 545S1260 540 1440 548V800H0Z" fill="url(#seaGrad2)"/>
+          <g class="sea__lines">
+            <path d="M120 610q30-10 60 0t60 0M420 650q30-10 60 0t60 0M260 720q30-10 60 0t60 0M760 600q30-10 60 0t60 0M700 700q30-10 60 0t60 0M1040 640q30-10 60 0t60 0M1240 700q30-10 60 0t60 0"/>
+          </g>
+          <!-- Raie manta, le totem de Kaï -->
+          <path class="manta" d="M0 22C18 8 36 2 48 12 54 6 62 6 68 12 80 2 98 8 116 22 96 24 76 30 62 36L58 62 54 36C40 30 20 24 0 22Z"/>
+        </svg>
+        <div class="tide__text">
+          <p class="tide__line tide__line--day">Le soleil se couche sur l'atelier…</p>
+          <p class="tide__line tide__line--night">…et l'océan s'allume.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DA N°2 : NUIT ===== -->
+    <section class="section da" id="da-nuit">
+      <div class="container da__grid">
+        <div>
+          <p class="eyebrow reveal">Univers n°2 <span class="wave-sign">∼</span></p>
+          <h2 class="title reveal">Océan <em>bioluminescent.</em></h2>
+          <p class="intro reveal">La même mer, la nuit. Des bleus profonds, une lueur turquoise qui s'allume au passage, la lune en guise de soleil. Plus mystérieux, plus technique&nbsp;: idéal pour montrer ce qui se passe sous la surface.</p>
+          <ul class="keywords reveal">
+            <li>profond</li><li>lumineux</li><li>précis</li><li>calme</li><li>vivant</li>
+          </ul>
+        </div>
+        <div class="da__card reveal">
+          <p class="da__label">Palette</p>
+          <div class="swatches">
+            <span style="--c:#0E1B21" data-hex="#0E1B21">Abysse</span>
+            <span style="--c:#17303A" data-hex="#17303A">Fond marin</span>
+            <span style="--c:#5FD3C6" data-hex="#5FD3C6">Plancton</span>
+            <span style="--c:#E9DDB8" data-hex="#E9DDB8">Lune</span>
+            <span style="--c:#EFE8DA" data-hex="#EFE8DA">Écume</span>
+          </div>
+          <p class="da__label">Typographies</p>
+          <p class="da__type-serif">Cormorant <em>Garamond</em></p>
+          <p class="da__type-sans">Montserrat, avec une lueur sur les accents.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJETS ===== -->
+    <section class="section" id="projets">
+      <div class="container">
+        <p class="eyebrow reveal">Projets <span class="wave-sign">∼</span></p>
+        <h2 class="title reveal">Fait main, <em>pour de vrai.</em></h2>
+
+        <article class="project reveal">
+          <a href="#projets" class="project__visual" aria-label="Voir le projet Maison Lune (projet fictif)">
+            <div class="mock">
+              <div class="mock__bar"><span></span><span></span><span></span><em>maisonlune-annecy.fr</em></div>
+              <div class="mock__screen">
+                <div class="mock__nav"><b>Maison Lune</b><i></i><i></i><i></i></div>
+                <p class="mock__title">Le pain du matin,<br><em>cuit au feu de bois.</em></p>
+                <div class="mock__btn"></div>
+                <div class="mock__grid"><i></i><i></i><i></i></div>
+              </div>
+            </div>
+          </a>
+          <div class="project__info">
+            <p class="project__meta">Boulangerie · Annecy · <span class="tag">Projet fictif</span></p>
+            <h3>Maison Lune</h3>
+            <p>Un site vitrine pour une boulangerie artisanale&nbsp;: la carte du jour modifiable par le boulanger, les horaires, et la précommande des viennoiseries pour le week-end.</p>
+            <ul class="project__stack">
+              <li>Maquette sur mesure</li><li>Contenu modifiable</li><li>Paiement en ligne</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== MÉTHODE ===== -->
+    <section class="section section--alt" id="methode">
+      <div class="container">
+        <p class="eyebrow reveal">Méthode <span class="wave-sign">∼</span></p>
+        <h2 class="title reveal">Quatre étapes, <em>un seul interlocuteur.</em></h2>
+        <ol class="steps">
+          <li class="reveal"><span>01</span><h3>On se rencontre</h3><p>Premier rendez-vous offert pour comprendre votre métier et votre besoin.</p></li>
+          <li class="reveal"><span>02</span><h3>On dessine</h3><p>Une maquette sur mesure, que vous validez avant la moindre ligne de code.</p></li>
+          <li class="reveal"><span>03</span><h3>On construit</h3><p>Le site est codé à la main, rapide, accessible, prêt pour Google.</p></li>
+          <li class="reveal"><span>04</span><h3>On met en ligne</h3><p>Et on reste là ensuite&nbsp;: mises à jour, sauvegardes, petites modifs.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== OFFRE ===== -->
+    <section class="section" id="offre">
+      <div class="container offer">
+        <div class="offer__card reveal">
+          <p class="arch__tag">Pack de base</p>
+          <h3>Site vitrine one page</h3>
+          <ul>
+            <li>Maquette sur mesure</li>
+            <li>Ordinateur et mobile</li>
+            <li>Formulaire de contact</li>
+            <li>RGPD de base</li>
+            <li>Mise en ligne</li>
+            <li>2 allers-retours de corrections</li>
+          </ul>
+          <p class="offer__price"><small>Prix fixe</small>1 000 €</p>
+        </div>
+        <div class="offer__text">
+          <p class="eyebrow reveal">L'offre <span class="wave-sign">∼</span></p>
+          <h2 class="title reveal">Un pack de base, <em>des options au choix.</em></h2>
+          <p class="intro reveal">Prix fixes et écrits, hors taxe, TVA non applicable. Vous choisissez ce que vous incluez, le total suit. Vous voyez des prix, jamais un nombre de jours.</p>
+          <p class="intro reveal">Ouvrez une catégorie pour voir le détail des options.</p>
+        </div>
+      </div>
+
+      <!-- Grille tarifaire complète, une catégorie par bloc dépliable -->
+      <div class="container pricing">
+        <details class="pricing__group reveal" open>
+          <summary>Pages et contenu <span>5 options</span></summary>
+          <ul class="options">
+            <li><div><b>Page supplémentaire simple</b><small>Réutilise le design existant</small></div><em>120 €</em></li>
+            <li><div><b>Page avec mise en page spécifique</b><small>Nouvelle mise en page à concevoir</small></div><em>250 €</em></li>
+            <li><div><b>Contenu modifiable</b><small>Vous ajoutez et modifiez vous-même vos contenus (galerie, actualités)</small></div><em>500 €</em></li>
+            <li><div><b>Animations sur mesure</b><small>Effets au défilement et transitions</small></div><em>200 €</em></li>
+            <li><div><b>Prise de rendez-vous en ligne</b><small>Intégration d'un outil de réservation existant</small></div><em>200 €</em></li>
+          </ul>
+        </details>
+
+        <details class="pricing__group reveal">
+          <summary>Inscriptions et paiement <span>8 options</span></summary>
+          <ul class="options">
+            <li><div><b>Préinscription en ligne</b><small>Compteur de places en direct, liste d'attente quand c'est plein</small></div><em>400 €</em></li>
+            <li><div><b>Moyen de paiement enregistré, sans débit</b><small>Carte ou SEPA enregistré avec l'accord du futur membre, rien n'est prélevé</small></div><em>300 €</em></li>
+            <li><div><b>Annulation, date limite et clôture</b><small>Tout est libéré si l'objectif n'est pas atteint</small></div><em>200 €</em></li>
+            <li><div><b>E-mails automatiques</b><small>Confirmations et relances aux couleurs du site</small></div><em>200 €</em></li>
+            <li><div><b>Paiement en ligne simple</b><small>Page de paiement sécurisée pour un produit ou un acompte</small></div><em>500 €</em></li>
+            <li><div><b>Signature électronique des contrats</b><small>Envoi automatique au seuil choisi, suivi, relances</small></div><em>500 €</em></li>
+            <li><div><b>Prélèvements mensuels automatiques</b><small>Démarrage après signature, suivi de chaque échéance</small></div><em>500 €</em></li>
+            <li><div><b>Échecs, annulations, remboursements</b><small>Relances, changement de statut, e-mails associés</small></div><em>400 €</em></li>
+          </ul>
+        </details>
+
+        <details class="pricing__group reveal">
+          <summary>Tableau de bord et données <span>4 options</span></summary>
+          <ul class="options">
+            <li><div><b>Tableau de bord privé</b><small>Liste des inscrits, statuts, export, accès sécurisé</small></div><em>200 €</em></li>
+            <li><div><b>Tableau de bord avancé</b><small>Journal des e-mails, actions manuelles, double authentification</small></div><em>400 €</em></li>
+            <li><div><b>Design sur mesure du tableau de bord</b><small>Maquette dédiée au lieu de l'interface standard</small></div><em>200 €</em></li>
+            <li><div><b>RGPD renforcé</b><small>Durées de conservation, sécurisation, suppression sur demande</small></div><em>100 €</em></li>
+          </ul>
+        </details>
+
+        <details class="pricing__group reveal">
+          <summary>Conception <span>2 options</span></summary>
+          <ul class="options">
+            <li><div><b>Wireframes et prototype cliquable</b><small>Pour valider le parcours avant les maquettes finales</small></div><em>200 €</em></li>
+            <li><div><b>Atelier de cadrage supplémentaire</b><small>Le premier rendez-vous est offert</small></div><em>100 €</em></li>
+          </ul>
+        </details>
+
+        <details class="pricing__group reveal">
+          <summary>Sur mesure, sur devis <span>2 options</span></summary>
+          <ul class="options">
+            <li><div><b>Développement sur mesure</b><small>Pour tout besoin hors grille</small></div><em>200 € / jour</em></li>
+            <li><div><b>Design sur mesure</b><small>Pour tout besoin hors grille</small></div><em>200 € / jour</em></li>
+          </ul>
+        </details>
+
+        <details class="pricing__group reveal">
+          <summary>Récurrent et hors devis <span>3 options</span></summary>
+          <ul class="options">
+            <li><div><b>Maintenance site vitrine</b><small>Mises à jour, sauvegardes, petites modifications</small></div><em>30 à 40 € / mois</em></li>
+            <li><div><b>Maintenance application avec paiement</b><small>Idem, avec la surveillance des prélèvements</small></div><em>60 à 100 € / mois</em></li>
+            <li><div><b>Intervention hors devis</b><small>Toute demande hors pack et hors options</small></div><em>30 € / heure</em></li>
+          </ul>
+        </details>
+
+        <p class="pricing__note reveal">Les services extérieurs (hébergement, nom de domaine, frais de paiement, signature électronique) sont payés directement par le client, à son nom. TVA non applicable, art. 293 B du CGI.</p>
+      </div>
+    </section>
+
+    <!-- ===== À PROPOS ===== -->
+    <section class="section section--alt" id="a-propos">
+      <div class="container about">
+        <figure class="about__photo reveal">
+          <img src="img/baptiste.jpg" alt="Portrait de Baptiste Bordier, fondateur de l'Atelier Kaï" loading="lazy" width="827" height="1063">
+        </figure>
+        <div>
+          <p class="eyebrow reveal">À propos <span class="wave-sign">∼</span></p>
+          <h2 class="title reveal">Moi, c'est <em>Baptiste.</em></h2>
+          <p class="intro reveal">Développeur web entre Annecy et Lyon, j'ai fondé l'Atelier Kaï pour proposer une autre option entre le site tout fait et l'agence&nbsp;: le sur mesure d'une agence, avec la proximité d'un indépendant.</p>
+          <p class="intro reveal">Kaï, c'est «&nbsp;la mer&nbsp;» en hawaïen et en japonais. Les eaux turquoise, le voyage, l'horizon&nbsp;: un champ des possibles infini. Et un totem, la raie manta, qui avance sans bruit mais porte plus de force qu'il n'y paraît.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact">
+      <div class="container contact">
+        <div>
+          <p class="eyebrow reveal">Contact <span class="wave-sign">∼</span></p>
+          <h2 class="title reveal">Un projet&nbsp;? <em>Parlons-en.</em></h2>
+          <p class="intro reveal">Racontez-moi votre activité et votre idée. Je vous réponds sous 48&nbsp;h, et le premier rendez-vous est offert.</p>
+        </div>
+
+        <form class="form reveal" novalidate>
+          <div class="form__row">
+            <label>Votre nom<input type="text" name="nom" placeholder="Marie Dupont" required></label>
+            <label>Votre e-mail<input type="email" name="email" placeholder="marie@exemple.fr" required></label>
+          </div>
+          <fieldset class="chips">
+            <legend>Votre projet</legend>
+            <label><input type="radio" name="type" value="vitrine" checked><span>Site vitrine</span></label>
+            <label><input type="radio" name="type" value="outil"><span>Site + outil</span></label>
+            <label><input type="radio" name="type" value="refonte"><span>Refonte</span></label>
+            <label><input type="radio" name="type" value="autre"><span>Je ne sais pas encore</span></label>
+          </fieldset>
+          <label>Votre message<textarea name="message" rows="5" placeholder="Je suis boulanger à Annecy et j'aimerais…" required></textarea></label>
+          <button type="submit" class="btn">Envoyer</button>
+          <p class="form__note" role="status" hidden>Merci&nbsp;! (Aperçu&nbsp;: ce formulaire n'envoie rien pour l'instant.)</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p><b>Atelier Kaï</b> · Concevoir le web autrement</p>
+      <p>Annecy &amp; Lyon · © 2026</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
